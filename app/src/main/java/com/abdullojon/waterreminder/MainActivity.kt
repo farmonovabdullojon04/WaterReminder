@@ -48,12 +48,17 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
 
         requestNotificationPermission()
-        setupWaterReminder()
 
         setContent {
             WaterReminderTheme {
                 val mainViewModel: MainViewModel = hiltViewModel()
                 val state by mainViewModel.state.collectAsState()
+
+                LaunchedEffect(state.reminderIntervalMin) {
+                    if (state.reminderIntervalMin >= 15) {
+                        setupWaterReminder(state.reminderIntervalMin)
+                    }
+                }
 
                 when (state.isProfileCompleted) {
                     true -> {
@@ -100,12 +105,13 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    private fun setupWaterReminder() {
-        val workRequest = PeriodicWorkRequestBuilder<WaterReminderWorker>(15, TimeUnit.MINUTES)
+    private fun setupWaterReminder(intervalMin: Int = 60) {
+        val validInterval = intervalMin.coerceAtLeast(15).toLong()
+        val workRequest = PeriodicWorkRequestBuilder<WaterReminderWorker>(validInterval, TimeUnit.MINUTES)
             .build()
         WorkManager.getInstance(this).enqueueUniquePeriodicWork(
             "WaterReminderWork",
-            ExistingPeriodicWorkPolicy.KEEP,
+            ExistingPeriodicWorkPolicy.UPDATE,
             workRequest
         )
     }

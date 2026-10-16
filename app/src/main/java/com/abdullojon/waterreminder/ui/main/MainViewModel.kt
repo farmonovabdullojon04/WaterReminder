@@ -3,12 +3,7 @@ package com.abdullojon.waterreminder.ui.main
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.abdullojon.waterreminder.data.local.entity.WaterIntake
-import com.abdullojon.waterreminder.domain.usecase.AddWaterIntakeUseCase
-import com.abdullojon.waterreminder.domain.usecase.DeleteWaterIntakeUseCase
-import com.abdullojon.waterreminder.domain.usecase.GetTodayWaterIntakeUseCase
-import com.abdullojon.waterreminder.domain.usecase.GetUserProfileUseCase
-import com.abdullojon.waterreminder.domain.usecase.GetWaterIntakeHistoryUseCase
-import com.abdullojon.waterreminder.domain.usecase.SetCongratsShownTodayUseCase
+import com.abdullojon.waterreminder.domain.usecase.*
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
@@ -16,7 +11,6 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import javax.inject.Inject
-
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
@@ -50,7 +44,8 @@ class MainViewModel @Inject constructor(
                         dailyGoal = userData.dailyGoal,
                         isProfileCompleted = userData.isProfileCompleted,
                         lastCongratsDate = userData.lastCongratsDate,
-                        showCongratsDialog = if (shouldShowCongrats) true else currentState.showCongratsDialog
+                        showCongratsDialog = if (shouldShowCongrats) true else currentState.showCongratsDialog,
+                        reminderIntervalMin = userData.reminderIntervalMin
                     )
                 }
 
@@ -64,7 +59,7 @@ class MainViewModel @Inject constructor(
 
     private fun observeIntakeData() {
         viewModelScope.launch {
-           getTodayWaterIntakeUseCase().collect { total ->
+            getTodayWaterIntakeUseCase().collect { total ->
                 val intake = total ?: 0
                 val todayStr = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
 
@@ -97,7 +92,6 @@ class MainViewModel @Inject constructor(
     }
 
     fun addWater(amountMl: Int) {
-        if (amountMl <= 0) return
         viewModelScope.launch {
             addWaterIntakeUseCase(amountMl)
         }

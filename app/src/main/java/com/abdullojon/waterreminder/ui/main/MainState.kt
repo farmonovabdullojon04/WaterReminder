@@ -9,5 +9,6 @@ data class MainState(
     val intakeHistory: List<WaterIntake> = emptyList(),
     val isProfileCompleted: Boolean? = null,
     val lastCongratsDate: String = "",
-    val showCongratsDialog: Boolean = false
+    val showCongratsDialog: Boolean = false,
+    val reminderIntervalMin: Int = 60
 )

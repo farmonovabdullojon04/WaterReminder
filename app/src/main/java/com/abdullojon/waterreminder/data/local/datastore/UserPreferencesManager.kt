@@ -24,6 +24,7 @@ class UserPreferencesManager @Inject constructor(
     private val sleepStartKey = intPreferencesKey("sleep_start_min")
     private val sleepEndKey = intPreferencesKey("sleep_end_min")
     private val lastCongratsDateKey = stringPreferencesKey("last_congrats_date")
+    private val reminderIntervalKey = intPreferencesKey("reminder_interval_min")
 
     val userData: Flow<UserData> = context.dataStore.data.map { prefs ->
         UserData(
@@ -33,11 +34,18 @@ class UserPreferencesManager @Inject constructor(
             isProfileCompleted = prefs[profileCompletedKey] ?: false,
             sleepStartMin = prefs[sleepStartKey] ?: 1320,
             sleepEndMin = prefs[sleepEndKey] ?: 420,
-            lastCongratsDate = prefs[lastCongratsDateKey] ?: ""
+            lastCongratsDate = prefs[lastCongratsDateKey] ?: "",
+            reminderIntervalMin = prefs[reminderIntervalKey] ?: 60
         )
     }
 
-    suspend fun saveProfile(name: String, weight: Float, sleepStart: Int, sleepEnd: Int) {
+    suspend fun saveProfile(
+        name: String,
+        weight: Float,
+        sleepStart: Int,
+        sleepEnd: Int,
+        reminderIntervalMin: Int = 60
+    ) {
         val goal = (weight * 35).toInt()
         context.dataStore.edit { prefs ->
             prefs[nameKey] = name
@@ -46,6 +54,13 @@ class UserPreferencesManager @Inject constructor(
             prefs[profileCompletedKey] = true
             prefs[sleepStartKey] = sleepStart
             prefs[sleepEndKey] = sleepEnd
+            prefs[reminderIntervalKey] = reminderIntervalMin.coerceAtLeast(15)
+        }
+    }
+
+    suspend fun updateReminderInterval(intervalMin: Int) {
+        context.dataStore.edit { prefs ->
+            prefs[reminderIntervalKey] = intervalMin.coerceAtLeast(15)
         }
     }
 
@@ -69,5 +84,6 @@ data class UserData(
     val isProfileCompleted: Boolean,
     val sleepStartMin: Int,
     val sleepEndMin: Int,
-    val lastCongratsDate: String = ""
+    val lastCongratsDate: String = "",
+    val reminderIntervalMin: Int = 60
 )
