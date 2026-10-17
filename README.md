@@ -75,12 +75,15 @@ screenshots/
 | Yo'nalish | Kutubxona |
 |---|---|
 | Til | Kotlin 2.2 |
+| Asinxron ishlash | Kotlin Coroutines, Flow (`StateFlow`, `SharedFlow`) |
 | UI | Jetpack Compose, Material 3, Material Icons Extended |
 | Arxitektura | Clean Architecture (`data` / `domain` / `ui`), MVVM |
 | Navigatsiya | [Voyager](https://github.com/adrielcafe/voyager) |
 | DI | Hilt (+ `hilt-work`) |
 | Lokal ma'lumotlar | Room (suv yozuvlari), DataStore Preferences (profil va sozlamalar) |
 | Fon ishlari | WorkManager (`PeriodicWorkRequest`) |
+| Animatsiya | Compose Animation (`spring`, `animateFloatAsState`), Canvas (to'lqinli stakan) |
+| Bildirishnomalar | `NotificationCompat`, `NotificationChannel`, `BroadcastReceiver` |
 | MVI yordamchi | Orbit MVI |
 | Rasmlar | Coil |
 | Loglash / debug | Timber, Chucker (faqat debug) |
