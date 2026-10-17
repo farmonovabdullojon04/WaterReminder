@@ -24,9 +24,9 @@
 
 ## 📸 Skrinshotlar
 
-<img width="360" height="780" alt="image" src="https://github.com/user-attachments/assets/9d7957ac-fc89-4c62-8873-579d5d7aa4b9" />
-<img width="360" height="780" alt="image" src="https://github.com/user-attachments/assets/a09fa417-09b2-42a1-9474-5501478311a4" />
-<img width="360" height="780" alt="image" src="https://github.com/user-attachments/assets/ac173cc6-ed80-4dc5-abe5-0c79050fd9e6" />
+<img width="240" height="520" alt="image" src="https://github.com/user-attachments/assets/9d7957ac-fc89-4c62-8873-579d5d7aa4b9" />
+<img width="240" height="520" alt="image" src="https://github.com/user-attachments/assets/a09fa417-09b2-42a1-9474-5501478311a4" />
+<img width="240" height="520" alt="image" src="https://github.com/user-attachments/assets/ac173cc6-ed80-4dc5-abe5-0c79050fd9e6" />
 <img width="360" height="780" alt="image" src="https://github.com/user-attachments/assets/c70d2fc3-a40d-4bae-ab53-de00eded22e7" />
 <img width="360" height="780" alt="image" src="https://github.com/user-attachments/assets/34cbc61c-2a8a-4245-9c72-90663a0a76b6" />
 <img width="360" height="780" alt="image" src="https://github.com/user-attachments/assets/b6f35631-fb50-43c1-ad3a-a08be0d66fa4" />
@@ -34,6 +34,8 @@
 <img width="360" height="780" alt="image" src="https://github.com/user-attachments/assets/82057b48-37e7-4859-afae-8eb59f9a1d07" />
 <img width="360" height="780" alt="image" src="https://github.com/user-attachments/assets/b21d0c99-85c9-42b9-84c2-6ebd770a7978" />
 <img width="360" height="780" alt="image" src="https://github.com/user-attachments/assets/70c9c738-f93a-46d5-a801-4b95c47dfed8" />
+<img width="360" height="780" alt="image" src="https://github.com/user-attachments/assets/dda1de25-32ef-40d9-b71a-9217e8d8fc03" />
+
 
 <details>
 <summary>📁 Kutilayotgan fayllar ro'yxati</summary>
