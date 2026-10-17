@@ -24,19 +24,16 @@
 
 ## 📸 Skrinshotlar
 
-> Skrinshotlarni `screenshots/` papkasiga joylang va quyidagi fayl nomlari bilan saqlang (tavsiya etilgan o'lcham: 1080×2400). Rasm qo'yilmaguncha havolalar bo'sh ko'rinadi.
-
-| Profil yaratish | Asosiy ekran | Boshqa miqdor |
-|:---:|:---:|:---:|
-| <img src="screenshots/profile.png" width="220" alt="Profil yaratish" /> | <img src="screenshots/main.png" width="220" alt="Asosiy ekran" /> | <img src="screenshots/custom_amount.png" width="220" alt="Miqdor kiritish" /> |
-
-| Tabrik ekrani | Tarix | Sozlamalar |
-|:---:|:---:|:---:|
-| <img src="screenshots/result.png" width="220" alt="Natija ekrani" /> | <img src="screenshots/history.png" width="220" alt="Tarix" /> | <img src="screenshots/settings.png" width="220" alt="Sozlamalar" /> |
-
-| Bildirishnoma |
-|:---:|
-| <img src="screenshots/notification.png" width="220" alt="Eslatma bildirishnomasi" /> |
+<img width="720" height="1560" alt="image" src="https://github.com/user-attachments/assets/9d7957ac-fc89-4c62-8873-579d5d7aa4b9" />
+<img width="720" height="1560" alt="image" src="https://github.com/user-attachments/assets/a09fa417-09b2-42a1-9474-5501478311a4" />
+<img width="720" height="1560" alt="image" src="https://github.com/user-attachments/assets/ac173cc6-ed80-4dc5-abe5-0c79050fd9e6" />
+<img width="720" height="1560" alt="image" src="https://github.com/user-attachments/assets/c70d2fc3-a40d-4bae-ab53-de00eded22e7" />
+<img width="720" height="1560" alt="image" src="https://github.com/user-attachments/assets/34cbc61c-2a8a-4245-9c72-90663a0a76b6" />
+<img width="720" height="1560" alt="image" src="https://github.com/user-attachments/assets/b6f35631-fb50-43c1-ad3a-a08be0d66fa4" />
+<img width="720" height="1560" alt="image" src="https://github.com/user-attachments/assets/05c11073-f743-49b6-8a16-cb8a0fece22b" />
+<img width="720" height="1560" alt="image" src="https://github.com/user-attachments/assets/82057b48-37e7-4859-afae-8eb59f9a1d07" />
+<img width="720" height="1560" alt="image" src="https://github.com/user-attachments/assets/b21d0c99-85c9-42b9-84c2-6ebd770a7978" />
+<img width="720" height="1560" alt="image" src="https://github.com/user-attachments/assets/70c9c738-f93a-46d5-a801-4b95c47dfed8" />
 
 <details>
 <summary>📁 Kutilayotgan fayllar ro'yxati</summary>
@@ -169,7 +166,9 @@ Yoki loyihani **Android Studio**da oching va ▶ **Run** tugmasini bosing.
 
 ## 👨‍💻 Muallif
 
-**Abdullojon** — [`@abdullojon`](https://github.com/abdullojon)
+**Abdullojon Farmonov**
+
+**farmonovabdullojon04@gmail.com**
 
 Loyiha yoqqan bo'lsa, ⭐ qo'yishni unutmang!
 
