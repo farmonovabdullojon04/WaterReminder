@@ -24,7 +24,7 @@
 
 ## 📸 Skrinshotlar
 
-<img width="180" height="390" alt="image" src="https://github.com/user-attachments/assets/9d7957ac-fc89-4c62-8873-579d5d7aa4b9" />
+<img width="300" height="700" alt="image" src="https://github.com/user-attachments/assets/9d7957ac-fc89-4c62-8873-579d5d7aa4b9" />
 <img width="360" height="780" alt="image" src="https://github.com/user-attachments/assets/a09fa417-09b2-42a1-9474-5501478311a4" />
 <img width="360" height="780" alt="image" src="https://github.com/user-attachments/assets/ac173cc6-ed80-4dc5-abe5-0c79050fd9e6" />
 <img width="360" height="780" alt="image" src="https://github.com/user-attachments/assets/c70d2fc3-a40d-4bae-ab53-de00eded22e7" />
