@@ -21,6 +21,8 @@
 **WaterReminder** — foydalanuvchining vazniga qarab kunlik suv me'yorini hisoblab beradigan, ichilgan suvni animatsiyali stakan orqali ko'rsatadigan va kun davomida belgilangan oraliqda eslatma yuboradigan ilova. Uyqu vaqtida eslatmalar kelmaydi, kunlik maqsadga erishilgach esa ilova sizni tabriklaydi 🎉
 
 ---
+## 📸 video
+https://github.com/user-attachments/assets/17f30b72-df6a-496f-bb8e-633a17a7cbff
 
 ## 📸 Skrinshotlar
 
