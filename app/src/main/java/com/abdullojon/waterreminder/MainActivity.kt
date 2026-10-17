@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.core.content.ContextCompat
@@ -60,34 +61,25 @@ class MainActivity : ComponentActivity() {
                     }
                 }
 
-                when (state.isProfileCompleted) {
-                    true -> {
-                        Navigator(screen = MainScreen()) { navigator ->
-                            LaunchedEffect(navigationHandler) {
-                                navigationHandler.navigationFlow.collect { param ->
-                                    param.invoke(navigator)
-                                }
+                val isProfileCompleted = state.isProfileCompleted
+                if (isProfileCompleted != null) {
+                    val initialScreen = remember {
+                        if (isProfileCompleted) MainScreen() else ProfileScreen()
+                    }
+                    Navigator(screen = initialScreen) { navigator ->
+                        LaunchedEffect(navigationHandler) {
+                            navigationHandler.navigationFlow.collect { param ->
+                                param.invoke(navigator)
                             }
-                            CurrentScreen()
                         }
+                        CurrentScreen()
                     }
-                    false -> {
-                        Navigator(screen = ProfileScreen()) { navigator ->
-                            LaunchedEffect(navigationHandler) {
-                                navigationHandler.navigationFlow.collect { param ->
-                                    param.invoke(navigator)
-                                }
-                            }
-                            CurrentScreen()
-                        }
-                    }
-                    null -> {
-                        Box(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .background(Color(0xFFF8FAFC))
-                        )
-                    }
+                } else {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(Color(0xFFF8FAFC))
+                    )
                 }
             }
         }
